@@ -1,9 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="system">
+	<script>
+		(function () {
+			const saved = localStorage.getItem('theme');
+			const theme = saved || 'system';
+			const html = document.documentElement;
+		
+			const apply = (t) => {
+				html.classList.remove('theme-light', 'theme-dark');
+				if (t === 'dark') html.classList.add('theme-dark');
+				else if (t === 'light') html.classList.add('theme-light');
+				else {
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					html.classList.add('theme-dark');
+				} else {
+					html.classList.add('theme-light');
+				}
+				}
+			};
+		
+			apply(theme);
+			html.dataset.theme = theme;
+		})();
+	</script>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Cesar Sanchez Moreno | PORTAFOLIO</title>
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

@@ -1,0 +1,147 @@
+// @plugin '@tailwindcss/typography';
+:root{
+    color-scheme: light;
+    --rounded-global: .5rem;
+    --primary-900: #7a2407; // Fondo profundo, sombras
+    --primary-800: #a4320d; // Texto destacado en oscuro
+    --primary-700: #cc3e11; // Activo, énfasis fuerte
+    --primary-600: #e64a19; // Hover fuerte
+    --primary-500: #ff5722; // Color principal (botones, links)
+    --primary-500-hover: #ff562236; // Color principal (botones, links)
+    --primary-400: #ff7744; // Iconos activos, botones suaves
+    --primary-300: #ff986e; // Tarjetas, acento visible
+    --primary-200: #ffbda6; // Hover, acento sutíl
+    --primary-100: #ffe0d5; // Fondo o border
+    --primary-50: #fff4ed; // Fondo suave o hover ligero
+
+    --bg-primary-900: #1b3d70; // Fondo profundo (modo oscuro)
+    --bg-primary-800: #2a5aa3; // Texto oscuro en light
+    --bg-primary-700: #4376c2; // Elementos fuertes en fondo claro
+    --bg-primary-600: #5f8dd2; // Detalles o botones secundarios
+    --bg-primary-500: #7fa3dd; // Hover sobre tarjetas claras
+    --bg-primary-400: #a6bce7; // Acento leve en dark mode
+    --bg-primary-300: #cbd7f0; // Borde o tarjetas destacadas
+    --bg-primary-200: #e9eef9; // Fondo base principal
+    --bg-primary-100: #edf1f8; // Secciones, fondos suaves
+    --bg-primary-50: #f9fafb; // Fondo claro absoluto
+
+    --bg-tag: #fff;
+
+    --bg-card: #fff;
+    --bg-line-div: light-dark(var(--bg-primary-100), var(--bg-primary-200));
+    --shadow-card: var(--bg-primary-100);
+    --text-primary: #4b5563;
+    --text-secondary: #9ca3af;
+    --text-tertiary: #b0b4b9;
+    
+    
+    // GITHUB
+    --bg-github: #fff;
+    --bg-card-github: #fff;
+    --color-github: #0969da;
+    --border-github: #d1d9e0;
+}
+@media (prefers-color-scheme: dark) {
+    html.theme-dark {
+        color-scheme: dark;
+        --bg-primary-900: #c9ccd4;
+        --bg-primary-800: #a2a7b3;
+        --bg-primary-700: #787e91;
+        --bg-primary-600: #5d6273;
+        --bg-primary-500: #4a4e5d;
+        --bg-primary-400: #4e5058;
+        --bg-primary-300: #44464e;
+        --bg-primary-200: #313236;
+        --bg-primary-150: #222224;
+        --bg-primary-100: #101011;
+        --bg-primary-50:  #0e0f12;
+    
+        --bg-card: #1e1e1e;
+        --shadow-card: var(--bg-primary-50);
+        --text-primary: #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --text-tertiary: #798294;
+        --bg-tag: #2c2f36;
+    
+        --bg-github: #0d1117;
+        --bg-card-github: #161b22;
+        --color-github: #58a6ff;
+        --border-github: #30363d;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+img{
+    display: initial;
+}
+.active{
+    color: #fff;
+    *{
+        color: #fff !important;
+    }
+    .divider{
+        background-color: #fff9 !important;
+    }
+    .tag{
+        background-color: #fff4;
+        border: 1px solid var(--primary-500);
+    }
+}
+.tag{
+    transition: .15s;
+    border-radius: 10px;
+    border: 1px solid var(--bg-primary-200);
+    width: max-content;
+    padding: 0.125rem 0.625rem;
+    font-weight: bold;
+    align-content: center;
+    background-color: var(--bg-tag);
+    p{
+        color: var(--text-primary);
+    }
+}
+.text-github{
+    color: var(--color-github);
+    font-weight: bold;
+    font-size: 16px;
+    width: max-content;
+    *{
+        color: var(--color-github);
+        font-weight: bold;
+        font-size: 16px;
+    }
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.text-enlace{
+    color: var(--color-github);
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.text-center{
+    text-align: center;
+}
+.self-center{
+    align-self: center;
+}
+.container {
+    width: 100%;
+    max-width: initial;
+    height: 100%;
+    overflow: auto;
+    gap: 15px;
+}
+.box-contain{
+    display: contents;
+}
