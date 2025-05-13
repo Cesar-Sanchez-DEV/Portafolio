@@ -1,13 +1,13 @@
 // @plugin '@tailwindcss/typography';
 :root{
     color-scheme: light;
-    --rounded-global: .5rem;
+    --rounded-global: .37rem;
     --primary-900: #7a2407; // Fondo profundo, sombras
     --primary-800: #a4320d; // Texto destacado en oscuro
     --primary-700: #cc3e11; // Activo, énfasis fuerte
     --primary-600: #e64a19; // Hover fuerte
     --primary-500: #ff5722; // Color principal (botones, links)
-    --primary-500-hover: #ff562236; // Color principal (botones, links)
+    --primary-500-hover: #ff562236; // Color principal (botones, links) :hover
     --primary-400: #ff7744; // Iconos activos, botones suaves
     --primary-300: #ff986e; // Tarjetas, acento visible
     --primary-200: #ffbda6; // Hover, acento sutíl
@@ -26,6 +26,9 @@
     --bg-primary-50: #f9fafb; // Fondo claro absoluto
 
     --bg-tag: #fff;
+
+    --bg-disabled: #0002;
+    --color-disabled: #666;
 
     --bg-card: #fff;
     --bg-line-div: light-dark(var(--bg-primary-100), var(--bg-primary-200));
@@ -78,6 +81,7 @@
     text-decoration: none;
     list-style: none;
     transition: all 0.3s ease;
+    interpolate-size: allow-keywords;
     color: var(--text-primary);
 }
 img{
@@ -86,7 +90,7 @@ img{
 .active{
     color: #fff;
     *{
-        color: #fff !important;
+        color: #fff;
     }
     .divider{
         background-color: #fff9 !important;
@@ -94,19 +98,7 @@ img{
     .tag{
         background-color: #fff4;
         border: 1px solid var(--primary-500);
-    }
-}
-.tag{
-    transition: .15s;
-    border-radius: 10px;
-    border: 1px solid var(--bg-primary-200);
-    width: max-content;
-    padding: 0.125rem 0.625rem;
-    font-weight: bold;
-    align-content: center;
-    background-color: var(--bg-tag);
-    p{
-        color: var(--text-primary);
+        pointer-events: none;
     }
 }
 .text-github{

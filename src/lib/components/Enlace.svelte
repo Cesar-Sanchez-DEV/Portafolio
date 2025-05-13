@@ -34,17 +34,20 @@
         }
         &.active {
             a{
-                background-color: var(--primary-500);
-                color: white;
+                background-color: var(--primary-500-hover);
+                color: var(--primary-500);
                 font-weight: bold;
+                i, p{
+                    color: var(--primary-500);
+                }
                 &:hover {
                     +.borde{
-                        background-color: var(--primary-500);
+                        background-color: var(--primary-500-hover);
                     }
                 }
             }
             .borde{
-                background-color: var(--primary-500);
+                background-color: var(--primary-500-hover);
             }
         }
         .borde{

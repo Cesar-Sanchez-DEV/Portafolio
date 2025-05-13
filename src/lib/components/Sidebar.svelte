@@ -6,7 +6,7 @@
     <div class="sidebar-content">
         <img src="/MekoxFacha.jpg" alt="">
         <h1>César Sanchez Moreno</h1>
-        <p>Desarrollador web</p>
+        <p class="text-xs">Ingeniero de Sistemas e informática</p>
     </div>
     <nav class="sidebar-nav">
         <ul>
