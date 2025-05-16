@@ -59,7 +59,7 @@
 		const cardsTech = document.querySelectorAll('.techCard');
 		
 		cardsTech.forEach(item => {
-			item.addEventListener('mousemove', ()=>{
+			item.addEventListener('mousemove', (e)=>{
 				isActive = true;
 				techName = item.getAttribute('data-tech-name');
 			});

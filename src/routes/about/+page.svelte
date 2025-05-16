@@ -3,6 +3,7 @@
 	import { fade, fly } from "svelte/transition";
 	import Tabs from "$lib/components/Tabs.svelte";
 	import Tab from "$lib/components/Tab.svelte";
+	import Card from "$lib/components/Card.svelte";
 
 	// Datos de ejemplo
 	let user = {
@@ -18,7 +19,7 @@
 </script>
 
 <div class="container" in:fly={{y: 20, duration: 500}}>
-	<section class="profile-card-modern">
+	<!-- <section class="profile-card-modern">
 		<div class="card-header-gradient">
 			<div class="avatar-modern"></div>
 		</div>
@@ -60,6 +61,53 @@
 			<a href={user.linkedin}  class="linkedin" aria-label="Linkedin de César Sanchez Moreno" target="_blank"><i class="bx bxl-linkedin"></i></a>
 			<a href={user.twitter} class="twitter" aria-label="Twitter de César Sanchez Moreno" target="_blank"><i class="bx bxl-twitter"></i></a>
 		</div>
+	</section> -->
+	<section class="profile-card-modern">
+		<Card padding={{header: false, body: true}}>
+			<div slot="header">
+				<div class="card-header-gradient">
+					<div class="avatar-modern"></div>
+				</div>
+				<h2>{user.name}</h2>
+				<p class="role">{user.role}</p>
+				<div class="status-row">
+					<span class="status-available">Disponible</span>
+					<span class="exp-pill">5 años exp.</span>
+				</div>
+			</div>
+			<div class="info-modern">
+				<div><i class="bx bx-envelope"></i> <span class="label">Email</span><br><span>{user.email}</span></div>
+				<div><i class="bx bx-phone"></i> <span class="label">Teléfono</span><br><span>{user.phone}</span></div>
+				<div><i class="bx bx-map"></i> <span class="label">Ubicación</span><br><span>{user.location}</span></div>
+				<div><i class="bx bx-link"></i> <span class="label">Sitio web</span><br><span class="web-link">cesarsanchez.dev</span></div>
+			</div>
+			<div class="skills-section">
+				<span class="skills-label">Habilidades principales</span>
+				<div class="skills-tags">
+					<span class="tag">React</span>
+					<span class="tag">Next.js</span>
+					<span class="tag">TypeScript</span>
+					<span class="tag">Node.js</span>
+					<span class="tag">Tailwind</span>
+				</div>
+			</div>
+			<div class="languages-section">
+				<span class="skills-label">Idiomas</span>
+				<div class="lang-row">
+					<span>Español</span>
+					<div class="lang-dots"><span class="dot active"></span><span class="dot active"></span><span class="dot active"></span><span class="dot active"></span></div>
+				</div>
+				<div class="lang-row">
+					<span>Inglés</span>
+					<div class="lang-dots"><span class="dot active"></span><span class="dot active"></span><span class="dot active"></span><span class="dot"></span></div>
+				</div>
+			</div>
+			<div class="social-modern">
+				<a href={user.github} class="github" aria-label="Github de César Sanchez Moreno" target="_blank"><i class="bx bxl-github"></i></a>
+				<a href={user.linkedin}  class="linkedin" aria-label="Linkedin de César Sanchez Moreno" target="_blank"><i class="bx bxl-linkedin"></i></a>
+				<a href={user.twitter} class="twitter" aria-label="Twitter de César Sanchez Moreno" target="_blank"><i class="bx bxl-twitter"></i></a>
+			</div>
+		</Card>
 	</section>
 	<section class="main-content">
 		<Tabs type="modern">
@@ -89,16 +137,11 @@
 <style lang="scss">
 /* --- Modern Card Styles --- */
 .profile-card-modern {
-	background: var(--bg-card);
-	border-radius: var(--rounded-global);
-	box-shadow: 0 2px 16px var(--shadow-card);
-	/* padding: 0 1.5rem 2rem 1.5rem; */
 	min-width: 340px;
 	max-width: 340px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border: 1px solid var(--bg-primary-200);
 	position: relative;
 }
 .card-header-gradient {
@@ -157,12 +200,6 @@
 	padding: 0.2rem 0.9rem;
 	font-size: 0.95rem;
 	font-weight: 600;
-}
-.info-modern {
-	width: 100%;
-	margin-bottom: 1.2rem;
-	padding-top: 0.5rem;
-	border-top: 1px solid var(--bg-primary-200);
 }
 .info-modern > div {
 	display: flex;

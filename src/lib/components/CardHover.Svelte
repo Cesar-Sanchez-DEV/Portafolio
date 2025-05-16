@@ -36,7 +36,8 @@
         align-items: center;
         overflow: hidden;
         .content{
-            background-color: var(--bg-primary-100);
+            background-color: var(--primary-700-hover);
+            backdrop-filter: blur(5px);
             padding: 5px 20px;
             transform: scaleY(0);
             transition: transform .2s;
@@ -44,6 +45,9 @@
         &.active{
             .content{
                 transform: none;
+                p{
+                    color: light-dark(var(--text-primary), var(--text-primary));
+                }
             }
         }
     }

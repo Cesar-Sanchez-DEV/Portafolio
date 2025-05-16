@@ -161,22 +161,22 @@
                 padding: 5px 10px;
                 font-weight: 500;
                 &:active{
-                    transform: scale(0.97);
+                    transform: scale(0.98);
                 }
                 &.active{
                     color: #fff;
-                    background-color: var(--primary-800);
+                    background-color: light-dark(var(--primary-500), var(--primary-800));
                     animation: animActiveButton 1s forwards;
                 }
                 @keyframes animActiveButton {
                     0%{
-                        transform: scale(1);
+                        transform: scale(0.98);
                     }
                     25%{
-                        transform: scale(1.02);
+                        transform: scale(1.01);
                     }
                     50%{
-                        transform: scale(0.98);
+                        transform: scale(0.99);
                     }
                     75%{
                         transform: scale(1.01);

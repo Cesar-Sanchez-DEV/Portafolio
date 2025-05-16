@@ -5,6 +5,7 @@
     --primary-900: #7a2407; // Fondo profundo, sombras
     --primary-800: #a4320d; // Texto destacado en oscuro
     --primary-700: #cc3e11; // Activo, énfasis fuerte
+    --primary-700-hover: #cc3e1136; // Activo, énfasis fuerte
     --primary-600: #e64a19; // Hover fuerte
     --primary-500: #ff5722; // Color principal (botones, links)
     --primary-500-hover: #ff562236; // Color principal (botones, links) :hover
@@ -15,6 +16,7 @@
     --primary-50: #fff4ed; // Fondo suave o hover ligero
 
     --bg-primary-900: #1b3d70; // Fondo profundo (modo oscuro)
+    --bg-primary-900-hover: #1b3d7033; // Fondo profundo (modo oscuro)
     --bg-primary-800: #2a5aa3; // Texto oscuro en light
     --bg-primary-700: #4376c2; // Elementos fuertes en fondo claro
     --bg-primary-600: #5f8dd2; // Detalles o botones secundarios
@@ -48,6 +50,7 @@
     html.theme-dark {
         color-scheme: dark;
         --bg-primary-900: #c9ccd4;
+        --bg-primary-900-hover: #c9ccd433;
         --bg-primary-800: #a2a7b3;
         --bg-primary-700: #787e91;
         --bg-primary-600: #5d6273;
@@ -57,6 +60,7 @@
         --bg-primary-200: #313236;
         --bg-primary-150: #222224;
         --bg-primary-100: #101011;
+        --bg-primary-100-hover: #10101199;
         --bg-primary-50:  #0e0f12;
     
         --bg-card: #1e1e1e;
