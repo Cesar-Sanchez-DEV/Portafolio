@@ -100,9 +100,12 @@ img{
         background-color: #fff9 !important;
     }
     .tag{
-        background-color: #fff4;
-        border: 1px solid var(--primary-500);
+        background-color: #fff4 !important;
+        border: 1px solid var(--primary-500) !important;
         pointer-events: none;
+        p{
+            color: #fff !important;
+        }
     }
 }
 .text-github{

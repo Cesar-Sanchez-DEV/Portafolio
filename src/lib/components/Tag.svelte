@@ -1,8 +1,9 @@
 <script lang="ts">
     export let label: string = "";
+    export let type: "primary" | "success" | "warning" | "error" = "primary";
 </script>
 
-<div class="tag">
+<div class="tag" class:type={type}>
     <p class="text-xs">{label}</p>
 </div>
 <style lang="scss">

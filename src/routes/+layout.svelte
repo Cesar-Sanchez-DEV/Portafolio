@@ -4,7 +4,7 @@
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import '../app.scss';
 	import '../../src/lib/styles/utils.css'
-
+	import { page } from '$app/stores';
 </script>
 
 <div class="page">
@@ -13,7 +13,7 @@
 	</aside>
 	<div class="page-layout">
 		<Header />
-		<main>
+		<main class:is-home={$page.url.pathname === '/'}>
 			<slot />
 		</main>
 		<Footer />
@@ -45,6 +45,9 @@
 		padding: 1rem;
 		background-color: var(--bg-primary-100);
 		border-radius: var(--rounded-global) 0 0 var(--rounded-global);
+		&.is-home{
+			padding: 15px 0 15px 15px;
+		}
 	}
 
 </style>

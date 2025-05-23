@@ -202,39 +202,6 @@
 						<a href="/about">Ver más</a>
 					</div>
 					<div class="content">
-						<!-- <div class="fondo">
-							<div class="circle">
-								<div class="tag_circle">
-									<Tag label="HTML"></Tag>
-								</div>
-								<div class="tag_circle">
-									<Tag label="CSS"></Tag>
-								</div>
-								<div class="tag_circle">
-									<Tag label="JavaScript"></Tag>
-								</div>
-								<div class="tag_circle">
-									<Tag label="PHP"></Tag>
-								</div>
-							</div>
-							<div class="circle"></div>
-							<div class="circle">
-								<div class="tag_circle">
-									<Tag label="Angular"></Tag>
-								</div>
-								<div class="tag_circle">
-									<Tag label="Svelte"></Tag>
-								</div>
-								<div class="tag_circle">
-									<Tag label="React"></Tag>
-								</div>
-								<div class="tag_circle">
-									<Tag label="Vue"></Tag>
-								</div>
-							</div>
-							<div class="circle"></div>
-							<div class="circle"></div>
-						</div> -->
 						<div class="techCard" data-tech-name="Html">
 							<div class="icon html">
 								<i class='bx bxl-html5'></i>
@@ -314,15 +281,15 @@
 							</div>
 						</li>
 					{/each}
-					<div class="directionals">
-						<span class="active">
-
-						</span>
-						<span>
-
-						</span>
-					</div>
 				</ul>
+				<div class="directionals">
+					<span class="active">
+
+					</span>
+					<span>
+
+					</span>
+				</div>
 			</div>
 		</div>
 		<div class="github alt card" in:fly={{delay: 420, y: 20, duration: 500}}>
@@ -378,7 +345,8 @@
 <style lang="scss">
 	.container{
 		display: flex;
-		overflow: initial;
+		overflow: auto;
+		padding-right: 15px;
 	}
 	.block{
 		flex: 1;
@@ -386,17 +354,15 @@
 		flex-direction: column;
 		gap: 15px;
 		width: 0;
+		height: max-content;
 		>div{
 			display: inherit;
 			flex-direction: inherit;
 			gap: inherit;
-			overflow: auto;
-			scrollbar-width: thin;
-			padding-right: 15px;
 			flex: 1;
 		}
 		&.block1{
-			width: 55%;
+			width: 60%;
 			flex: initial;
 		}
 		.card{
@@ -429,7 +395,6 @@
 			}
 			>.content{
 				padding: 15px;
-				overflow: auto;
 				display: flex;
 				height: max-content;
 			}
@@ -444,7 +409,7 @@
 				overflow: visible;
 			}
 			&.alt{
-				min-height: 51%;
+				min-height: 420px;
 				flex: initial;
 			}
 		}
@@ -648,117 +613,6 @@
 						}
 					}
 				}
-				// .fondo{
-				// 	width: 100%;
-				// 	height: 100%;
-				// 	position: absolute;
-				// 	display: flex;
-				// 	justify-content: center;
-				// 	background-color: var(--bg-primary-50);
-				// 	.circle{
-				// 		background-color: var(--bg-card);
-				// 		border: 1px solid var(--bg-primary-200);
-				// 		border-radius: 50%;
-				// 		position: absolute;
-				// 		bottom: 0;
-				// 		transform: translateY(75%);
-				// 		.tag_circle{
-				// 			animation: tag 4s infinite linear;
-				// 			position: absolute;
-				// 			transform: translateX(-50%);
-				// 			bottom: 0;
-				// 			left: 0;
-				// 			&:nth-child(2){
-				// 				animation-delay: 1s;
-				// 			}
-				// 			&:nth-child(3){
-				// 				animation-delay: 2s;
-				// 			}
-				// 			&:nth-child(4){
-				// 				animation-delay: 3s;
-				// 			}
-				// 		}
-				// 		@keyframes tag{
-				// 			0%{
-				// 				bottom: 50%;
-				// 				left: 0;
-				// 			}
-				// 			25%{
-				// 				bottom: 75%;
-				// 				left: 12.5%;
-				// 			}
-				// 			32%{
-				// 				bottom: 85%;
-				// 				left: 20%;
-				// 			}
-				// 			50%{
-				// 				bottom: 98%;
-				// 				left: 50%;
-				// 			}
-				// 			68%{
-				// 				bottom: 85%;
-				// 				left: 80%;
-				// 			}
-				// 			75%{
-				// 				bottom: 75%;
-				// 				left: 87.5%;
-				// 			}
-				// 			100%{
-				// 				bottom: 40%;
-				// 				left: 100%;
-				// 			}
-				// 		}
-				// 		&:nth-child(1){
-				// 			width: 200px;
-				// 			height: 200px;
-				// 			z-index: 5;
-				// 			display: flex;
-				// 		}
-				// 		&:nth-child(2){
-				// 			width: 325px;
-				// 			height: 300px;
-				// 			background-color: var(--bg-primary-50);
-				// 			bottom: 50px;
-				// 			transform: translateY(calc(75% - 0px));
-				// 			z-index: 4;
-				// 		}
-				// 		&:nth-child(3){
-				// 			width: 425px;
-				// 			height: 400px;
-				// 			bottom: 100px;
-				// 			transform: translateY(75%);
-				// 			z-index: 3;
-				// 			.tag_circle{
-				// 				animation: tag 9.5s infinite reverse linear;
-				// 				&:nth-child(1){
-				// 					animation-delay: 1s;
-				// 				}
-				// 				&:nth-child(2){
-				// 					animation-delay: 3.5s;
-				// 				}
-				// 				&:nth-child(3){
-				// 					animation-delay: 5.5s;
-				// 				}
-				// 				&:nth-child(4){
-				// 					animation-delay: 7.5s;
-				// 				}
-				// 			}
-				// 		}
-				// 		&:nth-child(4){
-				// 			width: 500px;
-				// 			height: 500px;
-				// 			bottom: 150px;
-				// 			background-color: var(--bg-primary-50);
-				// 			z-index: 2;
-				// 		}
-				// 		&:nth-child(5){
-				// 			width: 600px;
-				// 			height: 600px;
-				// 			bottom: 200px;
-				// 			z-index: 1;
-				// 		}
-				// 	}
-				// }
 			}
 		}
 	}
@@ -768,11 +622,11 @@
 			height: 100%;
 			padding: 0 15px 15px 15px;
 			overflow: hidden;
+			position: relative;
 			ul{
 				display: flex;
 				flex-direction: row-reverse;
 				height: 100%;
-				position: relative;
 				padding: 0 0 15px 0;
 				gap: 15px;
 				overflow: auto;
@@ -780,7 +634,7 @@
 				.work_card{
 					flex: 1;
 					height: 100%;
-					min-width: calc(100% / 2.2 - 35px);
+					min-width: calc(100% / 2.18 - 35px);
 					border-radius: var(--rounded-global);
 					border: 1px solid var(--bg-primary-200);
 					box-shadow: 0 0 8px var(--shadow-card);
@@ -844,25 +698,25 @@
 						gap: 10px;
 					}
 				}
-				.directionals{
-					display: flex;
-					align-items: center;
-					gap: 10px;
-					bottom: 0;
-					right: 50%;
-					transform: translateX(50%);
-					position: absolute;
-					span{
-						width: 5px;
-						height: 5px;
-						cursor: pointer;
-						background-color: var(--bg-primary-200);
-						border-radius: var(--rounded-global);
-						&.active{
-							height: 12px;
-							background-color: var(--primary-500);
-							
-						}
+			}
+			.directionals{
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				bottom: 7.5px;
+				right: 50%;
+				transform: translateX(50%);
+				position: absolute;
+				span{
+					width: 5px;
+					height: 5px;
+					cursor: pointer;
+					background-color: var(--bg-primary-200);
+					border-radius: var(--rounded-global);
+					&.active{
+						height: 12px;
+						background-color: var(--primary-500);
+						
 					}
 				}
 			}
@@ -873,6 +727,7 @@
 		border: 1px solid var(--border-github);
 		.container{
 			display: flex;
+			flex-direction: column;
 			padding: 5px 15px;
 			.profile{
 				flex: 1;
@@ -927,8 +782,9 @@
 				overflow: hidden;
 				height: 100%;
 				padding: 15px;
-				width: 50%;
+				width: 100%;
 				.repo{
+					width: 100%;
 					background-color: var(--bg-card-github);
 					border-radius: .5rem;
 					border: 1px solid var(--border-github);
